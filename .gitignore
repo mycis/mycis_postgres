@@ -1,0 +1,8 @@
+*.db
+*.swp
+*.pyc
+*.dll
+bin/
+cache/
+temp/
+test/dir_indices/

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>win_fav</class>
+ <widget class="QMainWindow" name="win_fav">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1026</width>
+    <height>688</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Microsoft JhengHei</family>
+    <pointsize>12</pointsize>
+    <weight>9</weight>
+    <italic>false</italic>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>代碼管理</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../res/mycis.qrc">
+    <normaloff>:/res/img/folder_bookmarks.png</normaloff>:/res/img/folder_bookmarks.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 75 12pt &quot;Microsoft JhengHei&quot;;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_7"/>
+  </widget>
+  <widget class="QMenuBar" name="mnb">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1026</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="mnu">
+    <property name="title">
+     <string>工作(&amp;W)</string>
+    </property>
+    <addaction name="act_import"/>
+    <addaction name="act_export"/>
+   </widget>
+   <addaction name="mnu"/>
+  </widget>
+  <widget class="QToolBar" name="tb">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="act_import"/>
+   <addaction name="act_export"/>
+  </widget>
+  <action name="act_import">
+   <property name="icon">
+    <iconset resource="../res/mycis.qrc">
+     <normaloff>:/res/img/fileimport.png</normaloff>:/res/img/fileimport.png</iconset>
+   </property>
+   <property name="text">
+    <string>匯入</string>
+   </property>
+   <property name="toolTip">
+    <string>匯入</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="act_export">
+   <property name="icon">
+    <iconset resource="../res/mycis.qrc">
+     <normaloff>:/res/img/file_export.png</normaloff>:/res/img/file_export.png</iconset>
+   </property>
+   <property name="text">
+    <string>匯出</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../res/mycis.qrc"/>
+ </resources>
+ <connections/>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>5</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>5</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
+</ui>

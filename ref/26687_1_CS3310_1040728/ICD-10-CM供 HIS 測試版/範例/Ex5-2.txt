@@ -1,0 +1,89 @@
+''''''''''''''''''''''''''''''''''''''''''''''''''
+' (讀卡機控制軟體範例程式)
+' 功能：字串格式轉換
+''''''''''''''''''''''''''''''''''''''''''''''''''
+Function MidMbcs(ByVal str As String, start, length)
+   MidMbcs = StrConv(MidB(StrConv(str, vbFromUnicode), start, length), vbUnicode)
+End Function
+
+''''''''''''''''''''''''''''''''''''''''''''''''''
+' (讀卡機控制軟體範例程式)
+' 功能：讀取卡片基本資料
+''''''''''''''''''''''''''''''''''''''''''''''''''
+Dim sID As String * 10, sBirthday As String * 7
+Dim sBufferA As String * 72
+Dim iBufferLenA As Integer
+iBufferLenA = 72
+iRet = hisGetBasicData(sBufferA, iBufferLenA)
+sID = MidMbcs(sBufferA, 33, 10)
+sBirthday = MidMbcs(sBufferA, 43, 7)
+
+''''''''''''''''''''''''''''''''''''''''''''''''''
+' (讀卡機控制軟體範例程式)
+' 功能：取得電子簽章，完成取號
+' 前置作業：無
+''''''''''''''''''''''''''''''''''''''''''''''''''
+Dim cTreatItem As String, cBabyTreat As String, cTreatAfterCheck As String, iBufferLen As Integer, iLen As Integer
+Dim sBufferDocID As String * 11
+cTreatItem = "01"
+cBabyTreat = " "
+cTreatAfterCheck = "0"
+iBufferLen = 296
+Dim sBuffer As String * 296
+' 取號
+iRet = hisGetSeqNumber256(cTreatItem, cBabyTreat, cTreatAfterCheck, sBuffer, iBufferLen)
+' 就診日期時間
+sDatetime = Left(sBuffer, 13)
+
+''''''''''''''''''''''''''''''''''''''''''''''''''
+' (讀卡機控制軟體範例程式)
+' 功能：寫入就醫紀錄
+' 前置作業：完成取號
+''''''''''''''''''''''''''''''''''''''''''''''''''
+Dim iRet As Integer
+Dim sDataWrite As String
+' 使用 API 1.47 hisWriteTreatmentData (就醫診療資料及費用寫入作業)
+'補卡註記[HC健8-4]
+'主要診斷碼[HC健8-8] 
+'次要診斷碼[HC健8-9] 第1組 
+'次要診斷碼[HC健8-9] 第2組 
+'次要診斷碼[HC健8-9] 第3組 
+'次要診斷碼[HC健8-9] 第4組 
+'次要診斷碼[HC健8-9] 第5組 
+'門診醫療費用【當次】
+'門診部分負擔費用【當次】
+'住院醫療費用【當次】
+'住院部分負擔費用【當次急性30天， 慢性180天以下】
+'住院部分負擔費用【當次急性31天， 慢性181天以上】
+sHC_8_8 = "G44201"
+sHC_8_9_1 = "G44209"
+sHC_8_9_2 = "G44211"
+sHC_8_9_3 = "G44219"
+sHC_8_9_4 = "G44221"
+sHC_8_9_5 = "G44229"
+iRet = hisGetICD10EnC(sHC_8_8, sBufferA)
+sX_HC_8_8 = MidMbcs(sBufferA, 1, 5)
+iRet = hisGetICD10EnC(sHC_8_9_1, sBufferA)
+sX_HC_8_9_1 = MidMbcs(sBufferA, 1, 5)
+iRet = hisGetICD10EnC(sHC_8_9_2, sBufferA)
+sX_HC_8_9_2 = MidMbcs(sBufferA, 1, 5)
+iRet = hisGetICD10EnC(sHC_8_9_3, sBufferA)
+sX_HC_8_9_3 = MidMbcs(sBufferA, 1, 5)
+iRet = hisGetICD10EnC(sHC_8_9_4, sBufferA)
+sX_HC_8_9_4 = MidMbcs(sBufferA, 1, 5)
+iRet = hisGetICD10EnC(sHC_8_9_5, sBufferA)
+sX_HC_8_9_5 = MidMbcs(sBufferA, 1, 5)
+sDataWrite = "0" & _
+			 Trim(sX_HC_8_8) & _
+			 Trim(sX_HC_8_9_1) & _
+			 Trim(sX_HC_8_9_2) & _
+			 Trim(sX_HC_8_9_3) & _
+			 Trim(sX_HC_8_9_4) & _
+			 Trim(sX_HC_8_9_5) & _
+			 "00000100" & _
+			 "00000200" & _
+			 "00000300" & _
+			 "0000400" & _
+			 "0000500"
+iRet = hisWriteTreatmentData(sDatetime, sID, sBirthday, sDataWrite, sBufferDocID)
+

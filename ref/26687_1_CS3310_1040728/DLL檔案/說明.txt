@@ -1,0 +1,20 @@
+1. 新增異常代碼：9127 找不到對應編碼內容或參數傳遞方式錯誤
+2. 新增 API hisGetICD10EnC,hisGetICD10DeC 提供 HIS 系統進行編碼及轉碼
+3. 修改 API 增加押碼/解押碼方式處理 ICD-10 CM 診斷碼資料
+	〔1.8〕  hisGetTreatmentNeedHPC
+	〔1.16〕 hisWriteTreatmentCode
+	〔1.33〕 hisGetCriticalIllness
+	〔1.47〕 hisWriteTreatmentData
+	〔1.50〕 hisGetCriticalIllnessID
+	押碼範圍說明：
+	＊　超過 5 Bytes及以V、E開頭的診斷碼
+4. 修改
+   (1).有任一項重大傷病註記者、18歲(含)以下者均免予提醒。
+   (2).＞18歲＜65歲者30次（含）以上，≧65歲者40次（含）以上予以提醒。
+   (3).對於就醫次數≧90次者提示訊息顯示為紅色字體。
+   (4).執行『掛號』（hisGetSeqNumber，hisGetSeqNumber256) 時才會檢查及提示(就醫類別:00~08)，其他一般查詢及寫卡動作不受影響。
+   (5).於螢幕畫面主動顯示訊息視窗，由工作人員協助提醒病患後，按下確定（滑鼠點選畫面任何位置，或點選OK，或是按下電腦鍵盤上的ENTER鍵）後，視窗自動消失關閉。
+5. 修改
+   (1).當安全模組未認證狀況下，呼叫讀寫卡片API，控制軟體會主動進行安全模組認證。
+   (2).加強 csOpenCom 前通訊連接埠佔用狀態檢查(請務必檢查 csOpenCom 的回傳值為 0 才可進行後續動作)。
+

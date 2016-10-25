@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>win_stat</class>
+ <widget class="QMainWindow" name="win_stat">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>951</width>
+    <height>591</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Microsoft JhengHei</family>
+    <pointsize>12</pointsize>
+    <weight>9</weight>
+    <italic>false</italic>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>統計圖表</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../res/mycis.qrc">
+    <normaloff>:/res/img/chart.png</normaloff>:/res/img/chart.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 75 12pt &quot;Microsoft JhengHei&quot;;</string>
+  </property>
+  <widget class="QWidget" name="wdg">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QWebView" name="gr">
+      <property name="url">
+       <url>
+        <string>about:blank</string>
+       </url>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="tb">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="stb"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebView</class>
+   <extends>QWidget</extends>
+   <header>QtWebKit/QWebView</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../res/mycis.qrc"/>
+ </resources>
+ <connections/>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>5</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>5</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
+</ui>

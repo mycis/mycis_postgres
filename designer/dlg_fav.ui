@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dlg_fav</class>
+ <widget class="QDialog" name="dlg_fav">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>548</width>
+    <height>141</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Microsoft JhengHei</family>
+    <pointsize>12</pointsize>
+    <weight>9</weight>
+    <italic>false</italic>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>新增代碼</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../res/mycis.qrc">
+    <normaloff>:/res/img/favorites.png</normaloff>:/res/img/favorites.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 75 12pt &quot;Microsoft JhengHei&quot;;</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_3">
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="lbl_code">
+         <property name="font">
+          <font>
+           <family>Microsoft JhengHei</family>
+           <pointsize>12</pointsize>
+           <weight>9</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>代碼</string>
+         </property>
+         <property name="buddy">
+          <cstring>led_code</cstring>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="led_code">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="echoMode">
+          <enum>QLineEdit::Normal</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="lbl_name">
+         <property name="font">
+          <font>
+           <family>Microsoft JhengHei</family>
+           <pointsize>12</pointsize>
+           <weight>9</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>名稱</string>
+         </property>
+         <property name="buddy">
+          <cstring>led_name</cstring>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="led_name">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="2" column="0">
+      <widget class="QDialogButtonBox" name="bnb">
+       <property name="font">
+        <font>
+         <family>Microsoft JhengHei</family>
+         <pointsize>12</pointsize>
+         <weight>9</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Ok</set>
+       </property>
+       <property name="centerButtons">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../res/mycis.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>bnb</sender>
+   <signal>accepted()</signal>
+   <receiver>dlg_fav</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>178</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bnb</sender>
+   <signal>rejected()</signal>
+   <receiver>dlg_fav</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>245</x>
+     <y>178</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

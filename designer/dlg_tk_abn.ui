@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dlg_tk_abn</class>
+ <widget class="QDialog" name="dlg_tk_abn">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>350</width>
+    <height>246</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>350</width>
+    <height>246</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>350</width>
+    <height>247</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Microsoft JhengHei</family>
+    <pointsize>12</pointsize>
+    <weight>9</weight>
+    <italic>false</italic>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>異常掛號：請輸入患者資料</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../res/mycis.qrc">
+    <normaloff>:/res/img/receptionist.png</normaloff>:/res/img/receptionist.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 75 12pt &quot;Microsoft JhengHei&quot;;</string>
+  </property>
+  <layout class="QFormLayout" name="formLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="font">
+      <font>
+       <family>Microsoft JhengHei</family>
+       <pointsize>12</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>患者姓名</string>
+     </property>
+     <property name="buddy">
+      <cstring>led_name</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLineEdit" name="led_name">
+     <property name="font">
+      <font>
+       <family>Microsoft JhengHei</family>
+       <pointsize>12</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="font">
+      <font>
+       <family>Microsoft JhengHei</family>
+       <pointsize>12</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>身份證號</string>
+     </property>
+     <property name="buddy">
+      <cstring>led_pid</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="led_pid">
+     <property name="font">
+      <font>
+       <family>Microsoft JhengHei</family>
+       <pointsize>12</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="font">
+      <font>
+       <family>Microsoft JhengHei</family>
+       <pointsize>12</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>出生日期</string>
+     </property>
+     <property name="buddy">
+      <cstring>ded_birth</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QDateEdit" name="ded_birth">
+     <property name="font">
+      <font>
+       <family>Microsoft JhengHei</family>
+       <pointsize>12</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="dateTime">
+      <datetime>
+       <hour>0</hour>
+       <minute>0</minute>
+       <second>0</second>
+       <year>2000</year>
+       <month>1</month>
+       <day>1</day>
+      </datetime>
+     </property>
+     <property name="minimumDate">
+      <date>
+       <year>1752</year>
+       <month>10</month>
+       <day>14</day>
+      </date>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QComboBox" name="cbo_abn">
+     <property name="font">
+      <font>
+       <family>Microsoft JhengHei</family>
+       <pointsize>12</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1">
+    <widget class="QDialogButtonBox" name="bnb">
+     <property name="font">
+      <font>
+       <family>Microsoft JhengHei</family>
+       <pointsize>12</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_6">
+     <property name="font">
+      <font>
+       <family>Microsoft JhengHei</family>
+       <pointsize>12</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>掛號時間</string>
+     </property>
+     <property name="buddy">
+      <cstring>ded_birth</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QDateTimeEdit" name="dted_tk">
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_5">
+     <property name="font">
+      <font>
+       <family>Microsoft JhengHei</family>
+       <pointsize>12</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>身份註記</string>
+     </property>
+     <property name="buddy">
+      <cstring>cbo_state</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QComboBox" name="cbo_state">
+     <property name="font">
+      <font>
+       <family>Microsoft JhengHei</family>
+       <pointsize>12</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="label_4">
+     <property name="font">
+      <font>
+       <family>Microsoft JhengHei</family>
+       <pointsize>12</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>異常狀態</string>
+     </property>
+     <property name="buddy">
+      <cstring>cbo_abn</cstring>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../res/mycis.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>bnb</sender>
+   <signal>accepted()</signal>
+   <receiver>dlg_tk_abn</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bnb</sender>
+   <signal>rejected()</signal>
+   <receiver>dlg_tk_abn</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

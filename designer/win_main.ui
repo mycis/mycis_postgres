@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>win_main</class>
+ <widget class="QMainWindow" name="win_main">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>951</width>
+    <height>591</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Microsoft JhengHei</family>
+    <pointsize>12</pointsize>
+    <weight>9</weight>
+    <italic>false</italic>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>mycis</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../res/mycis.qrc">
+    <normaloff>:/res/img/mycis.png</normaloff>:/res/img/mycis.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 75 12pt &quot;Microsoft JhengHei&quot;;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout"/>
+  </widget>
+  <widget class="QMenuBar" name="mnb">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>951</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>系統(&amp;M)</string>
+    </property>
+    <addaction name="act_backup"/>
+    <addaction name="act_renew"/>
+    <addaction name="separator"/>
+    <addaction name="act_quit"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>工作(&amp;W)</string>
+    </property>
+    <addaction name="act_tk"/>
+    <addaction name="separator"/>
+    <addaction name="act_app"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>說明(&amp;H)</string>
+    </property>
+    <addaction name="act_about"/>
+   </widget>
+   <widget class="QMenu" name="menu_V">
+    <property name="title">
+     <string>查詢(&amp;S)</string>
+    </property>
+    <addaction name="act_stat"/>
+    <addaction name="act_inst"/>
+    <addaction name="act_patient"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_V"/>
+   <addaction name="menu_3"/>
+  </widget>
+  <widget class="QToolBar" name="tb">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="act_tk"/>
+   <addaction name="separator"/>
+   <addaction name="act_stat"/>
+   <addaction name="act_inst"/>
+   <addaction name="act_patient"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QStatusBar" name="stb"/>
+  <action name="act_tk">
+   <property name="icon">
+    <iconset resource="../res/mycis.qrc">
+     <normaloff>:/res/img/receptionist.png</normaloff>:/res/img/receptionist.png</iconset>
+   </property>
+   <property name="text">
+    <string>掛號(&amp;R)</string>
+   </property>
+   <property name="iconText">
+    <string>掛號</string>
+   </property>
+   <property name="toolTip">
+    <string>掛號</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+R</string>
+   </property>
+  </action>
+  <action name="act_quit">
+   <property name="text">
+    <string>離開(&amp;Q)</string>
+   </property>
+   <property name="toolTip">
+    <string>離開</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Q</string>
+   </property>
+  </action>
+  <action name="act_stat">
+   <property name="icon">
+    <iconset resource="../res/mycis.qrc">
+     <normaloff>:/res/img/chart.png</normaloff>:/res/img/chart.png</iconset>
+   </property>
+   <property name="text">
+    <string>點數(&amp;T)</string>
+   </property>
+   <property name="iconText">
+    <string>點數</string>
+   </property>
+   <property name="toolTip">
+    <string>點數</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+T</string>
+   </property>
+  </action>
+  <action name="act_renew">
+   <property name="icon">
+    <iconset resource="../res/mycis.qrc">
+     <normaloff>:/res/img/system_software_update.png</normaloff>:/res/img/system_software_update.png</iconset>
+   </property>
+   <property name="text">
+    <string>更新(&amp;N)</string>
+   </property>
+   <property name="toolTip">
+    <string>更新</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+N</string>
+   </property>
+  </action>
+  <action name="act_app">
+   <property name="icon">
+    <iconset resource="../res/mycis.qrc">
+     <normaloff>:/res/img/db_comit.png</normaloff>:/res/img/db_comit.png</iconset>
+   </property>
+   <property name="text">
+    <string>申報(&amp;A)</string>
+   </property>
+   <property name="iconText">
+    <string>申報</string>
+   </property>
+   <property name="toolTip">
+    <string>申報</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+A</string>
+   </property>
+  </action>
+  <action name="act_backup">
+   <property name="icon">
+    <iconset resource="../res/mycis.qrc">
+     <normaloff>:/res/img/database.png</normaloff>:/res/img/database.png</iconset>
+   </property>
+   <property name="text">
+    <string>備份(&amp;B)</string>
+   </property>
+   <property name="iconText">
+    <string>資料庫備份</string>
+   </property>
+   <property name="toolTip">
+    <string>資料庫備份</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+B</string>
+   </property>
+  </action>
+  <action name="act_about">
+   <property name="icon">
+    <iconset resource="../res/mycis.qrc">
+     <normaloff>:/res/img/mycis.png</normaloff>:/res/img/mycis.png</iconset>
+   </property>
+   <property name="text">
+    <string>關於 mycis </string>
+   </property>
+  </action>
+  <action name="act_inst">
+   <property name="icon">
+    <iconset resource="../res/mycis.qrc">
+     <normaloff>:/res/img/document-open.png</normaloff>:/res/img/document-open.png</iconset>
+   </property>
+   <property name="text">
+    <string>案件(&amp;C)</string>
+   </property>
+   <property name="toolTip">
+    <string>案件</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+C</string>
+   </property>
+  </action>
+  <action name="act_patient">
+   <property name="icon">
+    <iconset resource="../res/mycis.qrc">
+     <normaloff>:/res/img/patient.png</normaloff>:/res/img/patient.png</iconset>
+   </property>
+   <property name="text">
+    <string>患者(&amp;P)</string>
+   </property>
+   <property name="toolTip">
+    <string>患者</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+P</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../res/mycis.qrc"/>
+ </resources>
+ <connections/>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>5</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>5</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
+</ui>

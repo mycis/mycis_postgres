@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>win_ic</class>
+ <widget class="QMainWindow" name="win_ic">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>951</width>
+    <height>585</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Microsoft JhengHei</family>
+    <pointsize>12</pointsize>
+    <weight>9</weight>
+    <italic>false</italic>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>IC卡作業</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../res/mycis.qrc">
+    <normaloff>:/res/img/text-x-vcard.png</normaloff>:/res/img/text-x-vcard.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 75 12pt &quot;Microsoft JhengHei&quot;;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout"/>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>951</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>檔案(&amp;F)</string>
+    </property>
+    <addaction name="act_new_tab"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>IC卡(&amp;I)</string>
+    </property>
+    <widget class="QMenu" name="menu_3">
+     <property name="title">
+      <string>寫入</string>
+     </property>
+     <addaction name="act_set_allergy"/>
+     <addaction name="act_set_tel"/>
+    </widget>
+    <addaction name="act_get_basic"/>
+    <addaction name="act_update_hc"/>
+    <addaction name="act_set_pwd"/>
+    <addaction name="act_stop_pwd"/>
+    <addaction name="separator"/>
+    <addaction name="act_get_ord"/>
+    <addaction name="act_get_diag"/>
+    <addaction name="act_get_allergy"/>
+    <addaction name="act_get_tel"/>
+    <addaction name="act_get_cum"/>
+    <addaction name="act_get_donate"/>
+    <addaction name="separator"/>
+    <addaction name="menu_3"/>
+   </widget>
+   <widget class="QMenu" name="menu_V">
+    <property name="title">
+     <string>醫事人員卡(&amp;H)</string>
+    </property>
+    <addaction name="act_verify_hpc"/>
+    <addaction name="act_set_hpc"/>
+    <addaction name="act_unlock_hpc"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_V"/>
+  </widget>
+  <action name="act_get_basic">
+   <property name="text">
+    <string>基本資料(&amp;B)</string>
+   </property>
+   <property name="toolTip">
+    <string>基本資料</string>
+   </property>
+  </action>
+  <action name="act_update_hc">
+   <property name="text">
+    <string>卡片更新(&amp;N)</string>
+   </property>
+   <property name="toolTip">
+    <string>卡片更新</string>
+   </property>
+  </action>
+  <action name="act_set_pwd">
+   <property name="text">
+    <string>啟用密碼(&amp;P)</string>
+   </property>
+   <property name="toolTip">
+    <string>啟用密碼</string>
+   </property>
+  </action>
+  <action name="act_stop_pwd">
+   <property name="text">
+    <string>停用密碼(&amp;S)</string>
+   </property>
+   <property name="toolTip">
+    <string>停用密碼</string>
+   </property>
+  </action>
+  <action name="act_get_ord">
+   <property name="text">
+    <string>醫令(&amp;O)</string>
+   </property>
+   <property name="toolTip">
+    <string>醫令</string>
+   </property>
+  </action>
+  <action name="act_get_diag">
+   <property name="text">
+    <string>診斷(&amp;D)</string>
+   </property>
+   <property name="toolTip">
+    <string>讀取診斷</string>
+   </property>
+  </action>
+  <action name="act_get_cum">
+   <property name="text">
+    <string>累計資料(&amp;C)</string>
+   </property>
+   <property name="toolTip">
+    <string>讀取就醫累計資料</string>
+   </property>
+  </action>
+  <action name="act_get_donate">
+   <property name="text">
+    <string>器官捐贈(&amp;G)</string>
+   </property>
+   <property name="toolTip">
+    <string>讀取器官捐贈註記</string>
+   </property>
+  </action>
+  <action name="act_set_allergy">
+   <property name="text">
+    <string>過敏藥物(&amp;A)</string>
+   </property>
+   <property name="toolTip">
+    <string>寫入過敏藥物</string>
+   </property>
+  </action>
+  <action name="act_set_tel">
+   <property name="text">
+    <string>聯絡電話(&amp;T)</string>
+   </property>
+   <property name="toolTip">
+    <string>寫入聯絡電話</string>
+   </property>
+  </action>
+  <action name="act_verify_hpc">
+   <property name="text">
+    <string>密碼認證(&amp;V)</string>
+   </property>
+   <property name="toolTip">
+    <string>醫事人員卡密碼認證</string>
+   </property>
+  </action>
+  <action name="act_set_hpc">
+   <property name="text">
+    <string>更改密碼(&amp;U)</string>
+   </property>
+   <property name="toolTip">
+    <string>醫事人員卡密碼更改</string>
+   </property>
+  </action>
+  <action name="act_unlock_hpc">
+   <property name="text">
+    <string>解除鎖卡(&amp;L)</string>
+   </property>
+   <property name="toolTip">
+    <string>解除醫事人員卡鎖卡</string>
+   </property>
+  </action>
+  <action name="act_get_tel">
+   <property name="text">
+    <string>聯絡電話(&amp;E)</string>
+   </property>
+   <property name="toolTip">
+    <string>聯絡電話</string>
+   </property>
+  </action>
+  <action name="act_new_tab">
+   <property name="text">
+    <string>新分頁(&amp;T)</string>
+   </property>
+   <property name="toolTip">
+    <string>新分頁</string>
+   </property>
+  </action>
+  <action name="act_get_allergy">
+   <property name="text">
+    <string>過敏藥物(&amp;M)</string>
+   </property>
+   <property name="toolTip">
+    <string>讀取過敏藥物(M)</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../res/mycis.qrc"/>
+ </resources>
+ <connections/>
+</ui>

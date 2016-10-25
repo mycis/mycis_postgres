@@ -1,0 +1,19 @@
+''''''''''''''''''''''''''''''''''''''''''''''''''
+' (讀卡機控制軟體範例程式)
+' 功能：字串格式轉換
+''''''''''''''''''''''''''''''''''''''''''''''''''
+Function MidMbcs(ByVal str As String, start, length)
+   MidMbcs = StrConv(MidB(StrConv(str, vbFromUnicode), start, length), vbUnicode)
+End Function
+
+
+''''''''''''''''''''''''''''''''''''''''''''''''''
+' (讀卡機控制軟體範例程式)
+' 功能：讀取卡片重大傷病紀錄及6筆就醫紀錄
+' 前置作業：完成醫師卡 PIN 碼驗證
+''''''''''''''''''''''''''''''''''''''''''''''''''
+Dim iRet As Integer
+Dim sBuffer As String * 372
+iBufferLen = 372
+' 使用 API 1.8 hisGetTreatmentNeedHPC (讀取就醫資料需要HPC卡的部份)
+iRet = hisGetTreatmentNeedHPC(sBuffer, iBufferLen)

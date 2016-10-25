@@ -1,0 +1,35 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+<qresource>
+<file>../res/img/1day.png</file>
+<file>../res/img/apply.png</file>
+<file>../res/img/calendar.png</file>
+<file>../res/img/chart.png</file>
+<file>../res/img/database.png</file>
+<file>../res/img/db_comit.png</file>
+<file>../res/img/document-open.png</file>
+<file>../res/img/edit-find.png</file>
+<file>../res/img/edit_redo.png</file>
+<file>../res/img/edit_undo.png</file>
+<file>../res/img/favorites.png</file>
+<file>../res/img/file_export.png</file>
+<file>../res/img/fileimport.png</file>
+<file>../res/img/folder_bookmarks.png</file>
+<file>../res/img/go_jump_today.png</file>
+<file>../res/img/health_care_shield.png</file>
+<file>../res/img/mycis.png</file>
+<file>../res/img/patient.png</file>
+<file>../res/img/pill.png</file>
+<file>../res/img/preferences-system.png</file>
+<file>../res/img/printer.png</file>
+<file>../res/img/receptionist.png</file>
+<file>../res/img/stethoscope.png</file>
+<file>../res/img/surgeon.png</file>
+<file>../res/img/syringe.png</file>
+<file>../res/img/system_software_update.png</file>
+<file>../res/img/text-x-vcard.png</file>
+<file>../res/img/thermometer.png</file>
+<file>../res/img/user-female.png</file>
+<file>../res/img/user-male.png</file>
+</qresource>
+</RCC>
